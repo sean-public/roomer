@@ -76,7 +76,7 @@ There are two basic queries that we'll want to perform: current occupant count f
 
 Down the road, we would probably extend this to offer timeranges that would return the timeseries data for the range suitable for charting and stats (like daily peak count and averages). This would allow us to create super cool dashboards and alerting systems.
 
-The code that process API queries is located [here in `views.py`](web_api/web_api/views.py). The noteworthy part is that the need for atomic updates / locking is avoided by not maintaining a running/current count for each doorway. If you wanted to do that, you could use an `F()` expression to update a field without querying for it round-trip in Django.
+The code that process API queries is located [here in `views.py`](web_api/web_api/views.py).
 
 
 
