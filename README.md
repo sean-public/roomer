@@ -68,6 +68,10 @@ I added indexes on the time series table, `Occupancy`, that might need to be ext
 
 I don't have time to set up a neat interface to consume the charts and graphs possible with the time series data. I also don't have time to create an admin interface but I chose to use Django for the example project and activated its built-in Admin site, which is handy for adding our initial data (see illustration above for what's included in the database). If you stand up the local dev server by running `python web_api/manage.py runserver `, you can navigate to `http://localhost:8000/admin` and enter the credentials `admin/securepassword` to log in (or use the `createsuperuser` command to add a new user).
 
+![admin_screenshot](admin_screenshot.png)
+
+
+
 There are two basic queries that we'll want to perform: current occupant count for a given space and a historical occupant count of a space at a given time in the past. I've made these into a single endpoint at `/space/<ID>/count`. An optional GET arg `timestamp` can specify the date and time in question if you want a historical reading or just leave it off for the current occupancy count.
 
 Down the road, we would probably extend this to offer timeranges that would return the timeseries data for the range suitable for charting and stats (like daily peak count and averages). This would allow us to create super cool dashboards and alerting systems.
