@@ -110,9 +110,9 @@ The distant past and future work as expected, with zeros in the past and the cur
 
 ```bash
 $ curl 'http://127.0.0.1:8000/space/2/count/?timestamp=1984-01-01'
-{"space_id": 3, "count": 0}
+{"space_id": 2, "count": 0}
 $ curl 'http://127.0.0.1:8000/space/2/count/?timestamp=2525-01-01'
-{"space_id": 3, "count": 4}
+{"space_id": 2, "count": 4}
 ```
 
 
